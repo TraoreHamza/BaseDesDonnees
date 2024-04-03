@@ -1,7 +1,7 @@
 <?php
 
 // Définit les clés de dictionnaire de la page
-$pageTitle = 'Liste toutes les Activités';
+$pageTitle = 'Liste des Activités';
 
 // Liste les Navires depuis la base de données
 // - Ouvre une connexion à la Base de données
