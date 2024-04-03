@@ -14,24 +14,23 @@
 
     <main>
 
-        <form action="/ctrl/add-marin.php" method="post">
-
-            <!-- Matricule -->
-            <div>
-                <label for="label">Matricule</label>
-                <input type="text" name="matricule" id="matricule">
-            </div>
+        <form action="/ctrl/activite-add.php" method="post">
 
             <!-- Nom -->
             <div>
-                <label for="code">Nom</label>
+                <label for="label">Nom</label>
                 <input type="text" name="nom" id="nom">
             </div>
 
-            <!-- Prénom -->
+            <!-- Service -->
             <div>
-                <label for="code">Prénom</label>
-                <input type="text" name="prenom" id="prenom">
+                <label for="service">Service</label>
+                <select name="idService" id="service">
+                    <?php foreach ($listService as $service) { ?>
+
+                        <option value="<?= $service['id'] ?>"><?= $service['nom'] ?></option>
+                    <?php } ?>
+                </select>
             </div>
 
             <div class="submit">

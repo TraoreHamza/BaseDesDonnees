@@ -22,4 +22,4 @@ $successOrFailure = $statement->execute();
 $listService = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/add-activite.php';
+include '../view/activite-add.php';

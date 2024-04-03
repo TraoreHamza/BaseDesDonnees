@@ -4,4 +4,4 @@
 $pageTitle = 'Ajouter un Marin';
 
 // Rends la vue
-include '../view/add-marin.php';
+include '../view/marin-add.php';

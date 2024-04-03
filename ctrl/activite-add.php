@@ -25,4 +25,4 @@ $statement->bindParam(':idService', $activite['idService']);
 $successOrFailure = $statement->execute();
 
 // Redirige vers la liste des Activités
-header('Location: ' . '/ctrl/activite-list .php');
+header('Location: ' . '/ctrl/activite-list.php');
