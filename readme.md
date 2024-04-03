@@ -1,6 +1,6 @@
 # Atelier 410-php-database
 
-![illustration](./brief-img.jpg)
+![illustration](./readme-img.jpg)
 
 ## Ceci n'est pas un atelier !
 
