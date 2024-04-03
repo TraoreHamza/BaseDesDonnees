@@ -10,7 +10,7 @@ $activite['idService'] = $_POST['idService'];
 // - Ouvre une connexion à la Base de données
 $host = '127.0.0.1';
 $port = '3306';
-$dbname = '380-database++-GRA';
+$dbname = '410-php-database-GRA';
 $user = 'root';
 $password = '';
 $dataSourceName = 'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $dbname;
