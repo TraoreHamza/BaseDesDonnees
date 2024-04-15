@@ -24,6 +24,7 @@
                     <th>matricule</th>
                     <th>nom</th>
                     <th>prénom</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -35,6 +36,7 @@
                         <td><?= $marin['matricule'] ?></td>
                         <td><?= $marin['nom'] ?></td>
                         <td><?= $marin['prenom'] ?></td>
+                        <td><a href="/ctrl/marin-delete.php?id=<?= $marin['id'] ?>" onclick ="return confirm('confirmer la suppression')"">Supprimer</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
