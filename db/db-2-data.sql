@@ -1,5 +1,5 @@
 -- Mentionne le nom de la base de données à utiliser pour exécuter les commandes SQL qui suivent.
-USE `410-php-database-GRA`;
+USE `410-php-database-HTR`;
 
 INSERT INTO typeNavire(id, nom) VALUES
      (10, 'Cargo')

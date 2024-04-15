@@ -3,17 +3,14 @@
 // Définit les clés de dictionnaire de la page
 $pageTitle = 'Détail d\'un Navire';
 
-// Liste toutes les informations du Navire dont l'id est passé en paramète de la requête HTTP
+// Lis les informations depuis la requête HTTP
 $idNavire =  $_GET['id'];
-// - Ouvre une connexion à la Base de données
-$host = '127.0.0.1';
-$port = '3306';
-$dbname = '410-php-database-GRA';
-$user = 'root';
-$password = '';
-$dataSourceName = 'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $dbname;
-$dbConnection = new PDO($dataSourceName, $user, $password);
-$dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// Ouvre une connexion à la BDD
+include '../cfg/db.php';
+include '../model/lib/db.php';
+$dbConnection = getConnection($dbConfig);
+
 // - Prépare la requête
 $query = 'SELECT navire.id, navire.numeroIMO, navire.nom, navire.idTypeNavire';
 $query .= ' FROM navire';

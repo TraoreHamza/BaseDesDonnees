@@ -1,9 +1,9 @@
 -- - Supprime la base de données si elle existe déjà
 -- - Crée la base de données
 -- - Mentionne le nom de la base de données à utiliser pour exécuter les commandes SQL qui suivent
-DROP DATABASE IF EXISTS `410-php-database-GRA`;
-CREATE DATABASE IF NOT EXISTS `410-php-database-GRA`;
-USE `410-php-database-GRA`;
+DROP DATABASE IF EXISTS `410-php-database-HTR`;
+CREATE DATABASE IF NOT EXISTS `410-php-database-HTR`;
+USE `410-php-database-HTR`;
 
 -- -------------
 -- TABLES

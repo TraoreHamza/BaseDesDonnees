@@ -1,10 +1,109 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+nav {
+    background-color: #f0f0f4;
+}
+
 nav > ul {
     display: flex;
-    margin: 0px;
-    padding: 0px;
+    padding-left: 0px;
 }
 
 nav > ul > li {
     list-style: none;
+    margin-right: 8px;
+    padding: 16px;
     width: 100%;
+    background-color: #f0f0f4;
+}
+
+nav > ul > li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > ul > li:hover {
+    background-color: white;
+}
+
+footer {
+    padding: 16px;
+    background-color: #f0f0f4;
+    font-weight: bold;
+}
+
+footer > ul {
+    display: flex;
+}
+
+footer > ul > li {
+    list-style: none;
+    width: 100%;
+}
+
+h1 {
+    padding: 16px;
+}
+
+main {
+    padding-left: 16px;
+}
+
+main > ul > li {
+    list-style: none;
+    padding-bottom: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+thead > tr > th {
+    padding: 8px;
+    background-color: #f0f0f4;
+    font-weight: bold;
+    text-align: left;
+}
+
+tbody > tr > td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px dashed;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+form > div {
+    padding-bottom: 8px;
+}
+
+form > div > label {
+    display: block;
+}
+
+form > div > select {
+    padding: 4px;
+}
+
+form > div > button {
+    margin-top: 16px;
+    padding: 4px;
+    font-weight: bold;
 }
