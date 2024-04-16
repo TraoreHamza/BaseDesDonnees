@@ -33,7 +33,10 @@
                         <td><?= $navire['numeroIMO'] ?></td>
                         <td><?= $navire['nom'] ?></td>
                         <td><?= $navire['idTypeNavire'] ?></td>
-                        <td><a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick ="return confirm('confirmer la suppression')"">Supprimer</a></td>
+                        <td>
+                            <a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')">Supprimer</a>
+                            <a href="/ctrl/navire-update-display.php?id=<?= $navire['id'] ?>">Modifier</a>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>

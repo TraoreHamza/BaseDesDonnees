@@ -33,8 +33,11 @@
                     <tr>
                         <td><?= $activite['id'] ?></td>
                         <td><?= $activite['nom'] ?></td>
-                        <td><?= $activite['nomService'] ?></td>
-                        <td><a href="/ctrl/activite-delete.php?id=<?= $activite['id'] ?>" onclick ="return confirm('confirmer la suppression')"">Supprimer</a></td>
+                        <td><?= $activite['idService'] ?></td>
+                        <td>
+                            <a href="/ctrl/activite-delete.php?id=<?= $activite['id'] ?>" onclick="return confirm('Confirmer la suppression')">Supprimer</a>
+                            <a href="/ctrl/activite-update-display.php?id=<?= $activite['id'] ?>">Modifier</a>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>
