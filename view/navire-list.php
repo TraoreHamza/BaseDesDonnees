@@ -11,12 +11,8 @@
 <body>
 
     <?php include '../view/_header.php' ?>
-
     <main>
-
         <table border="1">
-
-
             <!-- Entêtes de colonne écrites 'en dur' -->
             <thead>
                 <tr>
@@ -24,6 +20,8 @@
                     <th>numeroIMO</th>
                     <th>nom</th>
                     <th>idTypeNavire</th>
+                    <th>Action</th>
+
                 </tr>
             </thead>
 
@@ -35,12 +33,11 @@
                         <td><?= $navire['numeroIMO'] ?></td>
                         <td><?= $navire['nom'] ?></td>
                         <td><?= $navire['idTypeNavire'] ?></td>
+                        <td><a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick ="return confirm('confirmer la suppression')"">Supprimer</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-
-
     </main>
 
     <footer>

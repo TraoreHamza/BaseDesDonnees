@@ -23,6 +23,7 @@
                     <th>id</th>
                     <th>nom</th>
                     <th>nom du service</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -33,6 +34,7 @@
                         <td><?= $activite['id'] ?></td>
                         <td><?= $activite['nom'] ?></td>
                         <td><?= $activite['nomService'] ?></td>
+                        <td><a href="/ctrl/activite-delete.php?id=<?= $activite['id'] ?>" onclick ="return confirm('confirmer la suppression')"">Supprimer</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
