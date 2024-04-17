@@ -20,11 +20,18 @@ $query = 'SELECT navire.id, navire.numeroIMO, navire.nom, navire.idTypeNavire';
 $query .= ' FROM navire';
 $query .= ' WHERE navire.id = :idnavire';
 $statement = $dbConnection->prepare($query);
-$statement->bindParam(':idnavire', $idnavire);
+$statement->bindParam(':idnavire', $idNavire);
 
 // - Exécute la requête
 $successOrFailure = $statement->execute();
 $navire = $statement->fetch(PDO::FETCH_ASSOC);
+// - Prépare la requête
+$query = 'SELECT typeNavire.id, typeNavire.nom';
+$query .= ' FROM typeNavire';
+$statement = $dbConnection->prepare($query);
+// - Exécute la requête
+$successOrFailure = $statement->execute();
+$listTypeNavire = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
 include '../view/navire-update.php';

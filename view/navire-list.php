@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
     <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -34,8 +35,12 @@
                         <td><?= $navire['nom'] ?></td>
                         <td><?= $navire['idTypeNavire'] ?></td>
                         <td>
-                            <a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')">Supprimer</a>
-                            <a href="/ctrl/navire-update-display.php?id=<?= $navire['id'] ?>">Modifier</a>
+                            <a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id ="del">
+                                    delete
+                                </span></a>
+                            <a href="/ctrl/navire-update-display.php?id=<?= $navire['id'] ?>"><span class="material-symbols-outlined" id="edit">
+                                    box_edit
+                                </span></a>
                         </td>
                     </tr>
                 <?php } ?>

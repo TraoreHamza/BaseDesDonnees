@@ -22,7 +22,7 @@
             <!-- NumeroIMO -->
             <div>
                 <label for="label">Nom</label>
-                <input type="text" name="NumeroIMO" id="NumeroIMO" value="<?= $navire['NumeroIMO'] ?>">
+                <input type="text" name="numeroIMO" id="label" value="<?= $navire['numeroIMO'] ?>">
             </div>
 
             <!-- Nom -->
@@ -31,12 +31,26 @@
                 <input type="text" name="nom" id="nom" value="<?= $navire['nom'] ?>">
             </div>
 
-             <!-- idTypeNavire -->
-             <div>
-                <label for="label">Type de navire</label>
-                <input type="text" name="idTypeNavire" id="idTypeNavire" value="<?= $navire['idTypeNavire'] ?>">
-            </div>
+           <!-- idTypeNavire -->
+           <div>
+                <label for="service">Service</label>
+                <select name="idTypeNavire" id="idTypeNavire">
+                    <?php foreach ($listTypeNavire as $typeNavire) { ?>
 
+                        <?php
+
+                        // Quand l'option correspond au Type du Navire à modifier,
+                        // ajoute l'attribut 'selected' à la balise option
+                        $isSelectedMsg = '';
+                        if ($navire['idTypeNavire'] == $typeNavire['id']) {
+                            $isSelectedMsg = 'selected';
+                        }
+                        ?>
+
+                        <option value="<?= $typeNavire['id'] ?>" <?= $isSelectedMsg ?>><?= $typeNavire['nom'] ?></option>
+                    <?php } ?>
+                </select>
+            </div>
             <div class="submit">
                 <button type="submit">Valider</button>
             </div>

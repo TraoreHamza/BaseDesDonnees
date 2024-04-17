@@ -29,7 +29,7 @@ $statement = $dbConnection->prepare($query);
 $statement->bindParam(':numeroIMO', $navire['numeroIMO']);
 $statement->bindParam(':nom', $navire['nom']);
 $statement->bindParam(':idTypeNavire', $navire['idTypeNavire']);
-$statement->bindParam(':idnavire', $navire['id']);
+$statement->bindParam(':idNavire', $navire['id']);
 
 // - Exécute la requête
 $successOrFailure = $statement->execute();
