@@ -18,9 +18,9 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>numeroIMO</th>
+                    <th>numero IMO</th>
                     <th>nom</th>
-                    <th>idTypeNavire</th>
+                    <th>Type de navire</th>
                     <th>Action</th>
 
                 </tr>
@@ -33,7 +33,7 @@
                         <td><a href="/ctrl/navire.php?id=<?= $navire['id'] ?>"><?= $navire['id'] ?></a></td>
                         <td><?= $navire['numeroIMO'] ?></td>
                         <td><?= $navire['nom'] ?></td>
-                        <td><?= $navire['idTypeNavire'] ?></td>
+                        <td><?= $navire['nomTypeNavire'] ?></td>
                         <td>
                             <a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id ="del">
                                     delete

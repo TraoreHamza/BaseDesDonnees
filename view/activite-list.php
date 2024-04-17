@@ -34,7 +34,7 @@
                     <tr>
                         <td><?= $activite['id'] ?></td>
                         <td><?= $activite['nom'] ?></td>
-                        <td><?= $activite['idService'] ?></td>
+                        <td><?= $activite['nomService'] ?></td>
                         <td>
                             <a href="/ctrl/activite-delete.php?id=<?= $activite['id'] ?>" onclick="return confirm('Confirmer la suppression')" ><span class="material-symbols-outlined" id ="del">
                                     delete
