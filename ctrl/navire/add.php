@@ -9,8 +9,8 @@ $navire['nom'] = $_POST['nom'];
 $navire['idTypeNavire'] = $_POST['idTypeNavire'];
 
 // Ouvre une connexion à la Base de données
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // Prépare la requête
@@ -24,4 +24,4 @@ $statement->bindParam(':idT', $navire['idTypeNavire']);
 $successOrFailure = $statement->execute();
 
 // Redirige vers la liste des navires
-header('Location: ' . '/ctrl/navire-list.php');
+header('Location: ' . '/ctrl/navire/list.php');

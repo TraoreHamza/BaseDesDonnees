@@ -10,7 +10,7 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 

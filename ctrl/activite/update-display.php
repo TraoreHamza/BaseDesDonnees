@@ -11,8 +11,8 @@ $idActivite = $_GET['id'];
 // Charge le Activite depuis la base de données
 
 // - Ouvre une connexion à la BDD
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête
@@ -28,8 +28,8 @@ $activite = $statement->fetch(PDO::FETCH_ASSOC);
 
 // Charge la listes des Services
 // Ouvre une connexion à la Base de données
-// include '../cfg/db.php';
-// include '../model/lib/db.php';
+// include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+// include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 // $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête

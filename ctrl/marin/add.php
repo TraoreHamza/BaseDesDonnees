@@ -7,8 +7,8 @@ $marin['nom'] = $_POST['nom'];
 $marin['prenom'] = $_POST['prenom'];
 
 // Ouvre une connexion à la Base de données
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête
@@ -21,4 +21,4 @@ $statement->bindParam(':p', $marin['prenom']);
 $successOrFailure = $statement->execute();
 
 // Redirige vers la liste des Marins
-header('Location: ' . '/ctrl/marin-list.php');
+header('Location: ' . '/ctrl/marin/list.php');

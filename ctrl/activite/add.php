@@ -6,8 +6,8 @@ $activite['nom'] = $_POST['nom'];
 $activite['idService'] = $_POST['idService'];
 
 // Ouvre une connexion à la Base de données
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête
@@ -19,4 +19,4 @@ $statement->bindParam(':idService', $activite['idService']);
 $successOrFailure = $statement->execute();
 
 // Redirige vers la liste des Activités
-header('Location: ' . '/ctrl/activite-list.php');
+header('Location: ' . '/ctrl/activite/list.php');

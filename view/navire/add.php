@@ -10,11 +10,11 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
-        <form action="/ctrl/navire-add.php" method="post">
+        <form action="/ctrl/navire/add.php" method="post">
 
             <!-- numeroIMO -->
             <div>
@@ -45,7 +45,7 @@
         </form>
     </main>
 
-    <?php include '../view/_footer.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/footer.php' ?>
 </body>
 
 </html>

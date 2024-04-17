@@ -11,7 +11,7 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
@@ -36,10 +36,10 @@
                         <td><?= $activite['nom'] ?></td>
                         <td><?= $activite['nomService'] ?></td>
                         <td>
-                            <a href="/ctrl/activite-delete.php?id=<?= $activite['id'] ?>" onclick="return confirm('Confirmer la suppression')" ><span class="material-symbols-outlined" id ="del">
+                            <a href="/ctrl/activite/delete.php?id=<?= $activite['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id="del">
                                     delete
                                 </span></a>
-                            <a href="/ctrl/activite-update-display.php?id=<?= $activite['id'] ?>" ><span class="material-symbols-outlined" id="edit">
+                            <a href="/ctrl/activite/update-display.php?id=<?= $activite['id'] ?>"><span class="material-symbols-outlined" id="edit">
                                     box_edit
                                 </span></a>
                         </td>

@@ -4,8 +4,8 @@
 $pageTitle = 'Ajouter une Activité';
 
 // Ouvre une connexion à la Base de données
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête

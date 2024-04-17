@@ -12,8 +12,8 @@ $marin['prenom'] = $_POST['prenom'];
 // Modifie les information du Marin en base de données
 
 // - Ouvre une connexion à la Base de données
-include '../cfg/db.php';
-include '../model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête
@@ -35,4 +35,4 @@ $statement->bindParam(':idMarin', $marin['id']);
 $successOrFailure = $statement->execute();
 
 // Redirige vers la liste des Marins
-header('Location: ' . '/ctrl/marin-list.php');
+header('Location: ' . '/ctrl/marin/list.php');

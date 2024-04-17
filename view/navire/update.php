@@ -10,11 +10,11 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
-        <form action="/ctrl/navire-update.php" method="post">
+        <form action="/ctrl/navire/update.php" method="post">
 
             <!-- Id -->
             <input type="hidden" name="id" value="<?= $navire['id'] ?>">
@@ -31,8 +31,8 @@
                 <input type="text" name="nom" id="nom" value="<?= $navire['nom'] ?>">
             </div>
 
-           <!-- idTypeNavire -->
-           <div>
+            <!-- idTypeNavire -->
+            <div>
                 <label for="service">Service</label>
                 <select name="idTypeNavire" id="idTypeNavire">
                     <?php foreach ($listTypeNavire as $typeNavire) { ?>

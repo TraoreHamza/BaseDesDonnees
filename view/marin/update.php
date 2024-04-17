@@ -10,11 +10,11 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
-        <form action="/ctrl/marin-update.php" method="post">
+        <form action="/ctrl/marin/update.php" method="post">
 
             <!-- Id -->
             <input type="hidden" name="id" value="<?= $marin['id'] ?>">
@@ -43,7 +43,7 @@
         </form>
     </main>
 
-    <?php include '../view/_footer.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/_footer.php' ?>
 </body>
 
 </html>

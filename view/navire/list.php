@@ -11,7 +11,7 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
     <main>
         <table border="1">
             <!-- Entêtes de colonne écrites 'en dur' -->
@@ -30,15 +30,15 @@
                 <?php foreach ($listNavire as $navire) { ?>
 
                     <tr>
-                        <td><a href="/ctrl/navire.php?id=<?= $navire['id'] ?>"><?= $navire['id'] ?></a></td>
+                        <td><a href="/ctrl/navire/detail.php?= $navire['id'] ?>"><?= $navire['id'] ?></a></td>
                         <td><?= $navire['numeroIMO'] ?></td>
                         <td><?= $navire['nom'] ?></td>
                         <td><?= $navire['nomTypeNavire'] ?></td>
                         <td>
-                            <a href="/ctrl/navire-delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id ="del">
+                            <a href="/ctrl/navire/delete.php?id=<?= $navire['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id="del">
                                     delete
                                 </span></a>
-                            <a href="/ctrl/navire-update-display.php?id=<?= $navire['id'] ?>"><span class="material-symbols-outlined" id="edit">
+                            <a href="/ctrl/navire/update-display.php?id=<?= $navire['id'] ?>"><span class="material-symbols-outlined" id="edit">
                                     box_edit
                                 </span></a>
                         </td>

@@ -10,11 +10,11 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
-        <form action="/ctrl/activite-add.php" method="post">
+        <form action="/ctrl/activite/add.php" method="post">
 
             <!-- Nom -->
             <div>

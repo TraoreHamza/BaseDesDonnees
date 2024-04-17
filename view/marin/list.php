@@ -11,7 +11,7 @@
 
 <body>
 
-    <?php include '../view/_header.php' ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/view/partial/header.php' ?>
 
     <main>
 
@@ -38,10 +38,10 @@
                         <td><?= $marin['nom'] ?></td>
                         <td><?= $marin['prenom'] ?></td>
                         <td>
-                            <a href="/ctrl/marin-delete.php?id=<?= $marin['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id ="del">
+                            <a href="/ctrl/marin/delete.php?id=<?= $marin['id'] ?>" onclick="return confirm('Confirmer la suppression')"><span class="material-symbols-outlined" id="del">
                                     delete
                                 </span></a>
-                            <a href="/ctrl/marin-update-display.php?id=<?= $marin['id'] ?>"><span class="material-symbols-outlined" id="edit">
+                            <a href="/ctrl/marin/update-display.php?id=<?= $marin['id'] ?>"><span class="material-symbols-outlined" id="edit">
                                     box_edit
                                 </span></a>
                         </td>
