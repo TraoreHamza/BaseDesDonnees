@@ -9,8 +9,9 @@ include '../model/lib/db.php';
 $dbConnection = getConnection($dbConfig);
 
 // - Prépare la requête
-$query = 'SELECT navire.id, navire.numeroIMO, navire.nom, navire.idTypeNavire';
+$query = 'SELECT navire.id, navire.numeroIMO, navire.nom, navire.idTypeNavire, typeNavire.nom AS nomTypeNavire';
 $query .= ' FROM navire';
+$query .= ' JOIN typeNavire ON navire.idTypeNavire = typeNavire.id';
 $statement = $dbConnection->prepare($query);
 // - Exécute la requête
 $successOrFailure = $statement->execute();
