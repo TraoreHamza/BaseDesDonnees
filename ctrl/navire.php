@@ -22,4 +22,4 @@ $successOrFailure = $statement->execute();
 $listNavire = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue, au format HTML
-include '../view/navire.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/navire/detail.php';

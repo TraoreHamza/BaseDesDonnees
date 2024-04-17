@@ -17,4 +17,4 @@ $successOrFailure = $statement->execute();
 $listService = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/activite-add.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/activie/add.php';

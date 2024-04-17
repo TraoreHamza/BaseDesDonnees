@@ -18,4 +18,4 @@ $successOrFailure = $statement->execute();
 $listMarin = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/marin-add.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/marin/add.php';

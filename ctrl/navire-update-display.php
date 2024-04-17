@@ -41,4 +41,4 @@ $successOrFailure = $statement->execute();
 $listTypeNavire = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/navire-update.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/navire/update.php';

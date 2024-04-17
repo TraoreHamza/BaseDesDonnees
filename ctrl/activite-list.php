@@ -18,4 +18,4 @@ $successOrFailure = $statement->execute();
 $listActivite = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue, au format HTML
-include '../view/activite-list.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/activite/list.php';

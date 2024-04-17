@@ -20,4 +20,4 @@ $successOrFailure = $statement->execute();
 $listTypeNavire = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/navire-add.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/navire/add.php';

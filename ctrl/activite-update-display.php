@@ -41,4 +41,4 @@ $successOrFailure = $statement->execute();
 $listService = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/activite-update.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/activite/update.php';

@@ -17,4 +17,4 @@ $successOrFailure = $statement->execute();
 $listMarin = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 // Rends la vue, au format HTML
-include '../view/marin-list.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/marin/list.php';

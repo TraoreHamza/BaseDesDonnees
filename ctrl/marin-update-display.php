@@ -27,4 +27,4 @@ $successOrFailure = $statement->execute();
 $marin = $statement->fetch(PDO::FETCH_ASSOC);
 
 // Rends la vue
-include '../view/marin-update.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/view/marin/update.php';
