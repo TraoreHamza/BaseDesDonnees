@@ -25,6 +25,13 @@ $statement->bindParam(':idnavire', $idNavire);
 // - Exécute la requête
 $successOrFailure = $statement->execute();
 $navire = $statement->fetch(PDO::FETCH_ASSOC);
+
+// Charge la listes des Type des navires
+// Ouvre une connexion à la Base de données
+// include '../cfg/db.php';
+// include '../model/lib/db.php';
+// $dbConnection = getConnection($dbConfig);
+
 // - Prépare la requête
 $query = 'SELECT typeNavire.id, typeNavire.nom';
 $query .= ' FROM typeNavire';

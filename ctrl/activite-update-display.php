@@ -26,6 +26,12 @@ $statement->bindParam(':idActivite', $idActivite);
 $successOrFailure = $statement->execute();
 $activite = $statement->fetch(PDO::FETCH_ASSOC);
 
+// Charge la listes des Services
+// Ouvre une connexion à la Base de données
+// include '../cfg/db.php';
+// include '../model/lib/db.php';
+// $dbConnection = getConnection($dbConfig);
+
 // - Prépare la requête
 $query = 'SELECT service.id, service.nom';
 $query .= ' FROM service';
