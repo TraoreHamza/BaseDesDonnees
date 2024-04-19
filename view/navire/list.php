@@ -30,7 +30,7 @@
                 <?php foreach ($listNavire as $navire) { ?>
 
                     <tr>
-                        <td><a href="/ctrl/navire/detail.php?= $navire['id'] ?>"><?= $navire['id'] ?></a></td>
+                        <td><a href="/ctrl/navire/detail.php $navire['id'] ?>"><?= $navire['id'] ?></a></td>
                         <td><?= $navire['numeroIMO'] ?></td>
                         <td><?= $navire['nom'] ?></td>
                         <td><?= $navire['nomTypeNavire'] ?></td>

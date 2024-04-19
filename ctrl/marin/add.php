@@ -1,24 +1,20 @@
 <?php
 
-// Lis les informations saisies dans le formulaire
+include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/marin.php';
+
+// Ajoute un Marin
+
+// Lis les informations depuis la requête HTTP
 $marin = [];
 $marin['matricule'] = $_POST['matricule'];
 $marin['nom'] = $_POST['nom'];
 $marin['prenom'] = $_POST['prenom'];
 
-// Ouvre une connexion à la Base de données
-include $_SERVER['DOCUMENT_ROOT'] . '/cfg/db.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/model/lib/db.php';
+// Crée le Marin
 $dbConnection = getConnection($dbConfig);
-
-// - Prépare la requête
-$query = 'INSERT INTO marin (matricule, nom, prenom) VALUES (:mat, :n, :p)';
-$statement = $dbConnection->prepare($query);
-$statement->bindParam(':mat', $marin['matricule']);
-$statement->bindParam(':n', $marin['nom']);
-$statement->bindParam(':p', $marin['prenom']);
-// - Exécute la requête
-$successOrFailure = $statement->execute();
+$isSuccess = create($marin['matricule'], $marin['nom'], $marin['prenom'], $dbConnection);
 
 // Redirige vers la liste des Marins
 header('Location: ' . '/ctrl/marin/list.php');
